@@ -29,7 +29,7 @@ The script gathers the following performance metrics:
 Incorporate the script into a JavaScript file and link it in your HTML:
 
 ```html
-<script src="path/to/script.js"></script>
+<script defer src="path/to/script.js"></script>
 ```
 ### Step 2: Configure the Server Endpoint
 Ensure you modify the URL in `navigator.sendBeacon("/api/", data);` to point to your specific server or endpoint where the data will be collected.
