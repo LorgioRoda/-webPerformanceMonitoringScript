@@ -3,7 +3,7 @@
 ## Description
 This JavaScript script is designed to monitor and capture key web performance metrics directly in the user's browser. Once collected, these metrics are sent to a server for further analysis, enabling developers to optimize the user experience on their websites.
 
-[![Web Performance Monitoring Demo](https://github.com/user-attachments/assets/7c962f5a-3068-4e11-9861-484030931159)](https://github.com/user-attachments/assets/7c962f5a-3068-4e11-9861-484030931159)
+https://github.com/user-attachments/assets/f25ee627-4ca7-4b8a-8c32-4bfe74321288
 
 
 ## Collected Metrics
