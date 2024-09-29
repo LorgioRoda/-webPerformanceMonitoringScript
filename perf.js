@@ -1,6 +1,8 @@
 (() => {
   const payload = {
     url: window.location.href,
+    service: "performance-script",
+    tags: ["app:my-script"],
     load: 0,
     lcp: 0,
     dcl: 0,
@@ -80,21 +82,12 @@
     });
   }).observe({ type: "layout-shift", buffered: true });
 
-  // First Input Delay
-  new PerformanceObserver((entryList) => {
-    const entries = entryList.getEntries();
-    entries.forEach((entry) => {
-      payload.fid = entry.processingStart - entry.startTime || 0;
-      console.log(`FID: ${payload.fid}`);
-    });
-  }).observe({ type: "first-input", buffered: true });
-
   // Send data when the page is hidden
   window.addEventListener("visibilitychange", () => {
     if (document.visibilityState === 'hidden') {
       try {
         const data = JSON.stringify(payload);
-        navigator.sendBeacon("/api/", data);
+        navigator.sendBeacon("api", data); // Here put your api
         console.log("Sending performance data:", data);
       } catch (error) {
         console.error("Error serializing payload:", error);
