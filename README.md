@@ -14,7 +14,6 @@ The script gathers the following performance metrics:
 - **First Contentful Paint (fcp):** The time when the browser renders the first piece of DOM content.
 - **Largest Contentful Paint (lcp):** The time when the largest visible element in the viewport is rendered.
 - **Cumulative Layout Shift (cls):** The sum of all unexpected layout shifts that occur during the page's lifetime.
-- **First Input Delay (fid):** The time between a user's first interaction and the browser's response.
 - **Longtask (lts):** The duration of any task that blocks the main thread for a prolonged period (50 ms or more).
 
 ## How It Works
