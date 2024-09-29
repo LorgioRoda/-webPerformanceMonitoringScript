@@ -8,8 +8,22 @@
     dcl: 0,
     cls: 0,
     fcp: 0,
-    fid: 0,
-    lts: 0
+    lts: 0,
+    errors: []
+  };
+
+  // Catch error
+  window.onerror = function (message, source, lineno, colno, error) {
+    const errorDetails = {
+      message: message,
+      source: source,
+      lineno: lineno,
+      colno: colno,
+      stack: error ? error.stack : null
+    };
+
+    payload.errors.push(errorDetails);
+    console.error("Frontend Error Captured:", errorDetails);
   };
 
   // Utility function to handle document ready state
